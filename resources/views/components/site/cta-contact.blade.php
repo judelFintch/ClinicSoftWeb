@@ -13,8 +13,9 @@
         <div class="reveal mt-16 grid gap-4 border-t border-white/15 pt-10 text-left sm:grid-cols-3">
             <div class="rounded-xl border border-white/15 bg-white/5 p-5">
                 <p class="text-xs font-semibold tracking-wide text-primary-200 uppercase">Éditeur</p>
-                <p class="mt-1.5 text-sm text-white">DRC Care Medical</p>
+                <p class="mt-1.5 text-sm font-semibold text-white">ClinicSoft, un produit de DRC Care Medical</p>
                 <p class="mt-1 text-sm text-primary-200">République démocratique du Congo</p>
+                <a href="https://drccaremedical.com" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-white underline decoration-white/30 underline-offset-4 transition hover:text-primary-200">drccaremedical.com <x-ui.icon name="arrow-right" class="size-3.5" /></a>
             </div>
             <div class="rounded-xl border border-white/15 bg-white/5 p-5">
                 <p class="text-xs font-semibold tracking-wide text-primary-200 uppercase">Email</p>

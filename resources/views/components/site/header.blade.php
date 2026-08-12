@@ -6,7 +6,7 @@
 >
     <div class="shell">
         <div class="flex items-center justify-between rounded-2xl border border-white/70 bg-white/88 px-4 py-3 shadow-[0_12px_45px_-22px_rgba(15,23,42,.35)] backdrop-blur-xl sm:px-5">
-            <x-ui.logo tagline="La santé, mieux orchestrée" />
+            <x-ui.logo tagline="Un produit de DRC Care Medical" />
 
             <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
                 @foreach ([

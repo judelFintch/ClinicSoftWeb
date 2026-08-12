@@ -2,8 +2,9 @@
     <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div class="flex flex-col gap-8 border-t border-slate-200 pt-10 sm:flex-row sm:items-start sm:justify-between">
             <div>
-                <x-ui.logo tagline="Édité par DRC Care Medical" />
+                <x-ui.logo tagline="Un produit de DRC Care Medical" />
                 <a href="mailto:info@clinicsoft.tech" class="mt-4 block text-sm text-slate-600 hover:text-primary-800">info@clinicsoft.tech</a>
+                <a href="https://drccaremedical.com" target="_blank" rel="noopener noreferrer" class="mt-1 block text-sm font-semibold text-primary-800 hover:text-accent-700">drccaremedical.com</a>
             </div>
 
             <nav class="grid grid-cols-2 gap-x-10 gap-y-2 sm:flex sm:gap-8">
@@ -16,7 +17,7 @@
         </div>
 
         <div class="mt-10 flex flex-col gap-2 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-            <p>&copy; {{ date('Y') }} DRC Care Medical — Tous droits réservés.</p>
+            <p>&copy; {{ date('Y') }} DRC Care Medical — ClinicSoft est un produit de DRC Care Medical.</p>
             <p>Conçu avec exigence pour les professionnels de santé.</p>
         </div>
     </div>

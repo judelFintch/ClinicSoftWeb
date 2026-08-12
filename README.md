@@ -76,10 +76,10 @@ Tant qu'aucune instance de démonstration réelle n'est en ligne, les boutons «
 Dès qu'une démo réelle (vidéo ou instance ClinicSoft) sera disponible, il suffira de renseigner son URL dans `.env` :
 
 ```
-CLINICSOFT_DEMO_URL=https://...
+CLINICSOFT_DEMO_URL=https://demo.clinicsoft.tech/
 ```
 
-Tous les boutons de démo et la route `/demo` pointeront alors automatiquement vers cette URL (nouvel onglet), sans modification de code — voir `config/clinicsoft.php`.
+La démo est accessible à l’adresse [https://demo.clinicsoft.tech/](https://demo.clinicsoft.tech/). Tous les boutons de démo et la route `/demo` pointent automatiquement vers cette URL (nouvel onglet) — voir `config/clinicsoft.php`.
 
 ## Structure des vues
 

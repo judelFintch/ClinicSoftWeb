@@ -12,6 +12,12 @@
                     Système d’information hospitalier
                 </div>
 
+                <a href="https://drccaremedical.com" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-primary-800">
+                    <span class="text-slate-500">Un produit de</span>
+                    <span class="font-bold text-primary-900">DRC Care Medical</span>
+                    <x-ui.icon name="arrow-right" class="size-3.5" />
+                </a>
+
                 <h1 class="mt-7 text-[clamp(3.2rem,7vw,5.8rem)] font-semibold leading-[.92] tracking-[-.055em] text-primary-950">
                     Soignez mieux.<br>
                     <span class="gradient-text">Gérez plus juste.</span>
