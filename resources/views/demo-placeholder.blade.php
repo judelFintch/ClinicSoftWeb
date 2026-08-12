@@ -13,8 +13,8 @@
                 Cette instance de démonstration n’est pas encore en ligne. En attendant, demandez une démonstration personnalisée de ClinicSoft avec l’équipe DRC Care Medical.
             </p>
             <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <a href="{{ url('/#demo') }}" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-700 to-accent-600 px-5 py-3 text-sm font-medium text-white transition-colors hover:from-primary-800 hover:to-accent-700">
-                    Demander une démo
+                <a href="https://demo.clinicsoft.tech/" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-700 to-accent-600 px-5 py-3 text-sm font-medium text-white transition-colors hover:from-primary-800 hover:to-accent-700">
+                    Accéder à la démo
                 </a>
                 <a href="{{ url('/') }}" class="text-sm font-medium text-slate-600 hover:text-primary-800">Retour à l’accueil</a>
             </div>

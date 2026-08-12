@@ -61,13 +61,7 @@ npm run build
 
 ## Lien de démo
 
-Tous les appels à la démo et la route `/demo` redirigent directement vers l'instance publique. L'URL peut être personnalisée dans `.env` :
-
-```
-CLINICSOFT_DEMO_URL=https://demo.clinicsoft.tech/
-```
-
-Par défaut, la démo est accessible à l’adresse [https://demo.clinicsoft.tech/](https://demo.clinicsoft.tech/). La section Modules distingue les fonctionnalités disponibles dans la démo de celles encore en développement.
+Tous les appels à la démo et la route `/demo` redirigent directement vers [https://demo.clinicsoft.tech/](https://demo.clinicsoft.tech/). La section Modules distingue les fonctionnalités disponibles dans la démo de celles encore en développement.
 
 ## Structure des vues
 
