@@ -1,4 +1,4 @@
-<div class="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+<div class="rounded-3xl border border-slate-200/80 bg-[#f8faff] p-6 shadow-[0_24px_60px_-35px_rgba(20,29,74,.4)] sm:p-9">
     @if ($submitted)
         <div class="flex flex-col items-center py-6 text-center" wire:key="confirmation">
             <span class="flex size-12 items-center justify-center rounded-full bg-primary-100 text-primary-700">
@@ -25,7 +25,7 @@
                     id="name"
                     wire:model="name"
                     autocomplete="name"
-                    class="mt-1.5 block w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:ring-1 focus:ring-primary-600 focus:outline-none"
+                    class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:outline-none"
                     placeholder="Votre nom"
                 >
                 @error('name') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
@@ -38,7 +38,7 @@
                     id="establishment"
                     wire:model="establishment"
                     autocomplete="organization"
-                    class="mt-1.5 block w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:ring-1 focus:ring-primary-600 focus:outline-none"
+                    class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:outline-none"
                     placeholder="Nom de votre clinique, centre ou hôpital"
                 >
                 @error('establishment') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
@@ -52,7 +52,7 @@
                         id="phone"
                         wire:model="phone"
                         autocomplete="tel"
-                        class="mt-1.5 block w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:ring-1 focus:ring-primary-600 focus:outline-none"
+                        class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:outline-none"
                         placeholder="+243 ..."
                     >
                     @error('phone') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
@@ -65,7 +65,7 @@
                         id="email"
                         wire:model="email"
                         autocomplete="email"
-                        class="mt-1.5 block w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:ring-1 focus:ring-primary-600 focus:outline-none"
+                        class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:outline-none"
                         placeholder="vous@etablissement.cd"
                     >
                     @error('email') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
@@ -78,7 +78,7 @@
                     id="message"
                     wire:model="message"
                     rows="4"
-                    class="mt-1.5 block w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:ring-1 focus:ring-primary-600 focus:outline-none"
+                    class="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary-600 focus:outline-none"
                     placeholder="Précisez vos besoins, vos services, votre nombre d’utilisateurs..."
                 ></textarea>
                 @error('message') <p class="mt-1.5 text-sm text-red-600">{{ $message }}</p> @enderror
@@ -88,7 +88,7 @@
                 type="submit"
                 wire:loading.attr="disabled"
                 wire:target="submit"
-                class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary-700 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-primary-800 disabled:cursor-not-allowed disabled:opacity-70"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary-950 px-5 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-primary-800 disabled:cursor-not-allowed disabled:opacity-70"
             >
                 <span wire:loading.remove wire:target="submit">Demander une démo</span>
                 <span wire:loading wire:target="submit">Envoi en cours...</span>

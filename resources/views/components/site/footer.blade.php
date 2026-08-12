@@ -1,4 +1,4 @@
-<footer class="bg-white">
+<footer class="bg-[#f7f9fc]">
     <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div class="flex flex-col gap-8 border-t border-slate-200 pt-10 sm:flex-row sm:items-start sm:justify-between">
             <div>
@@ -15,6 +15,9 @@
             </nav>
         </div>
 
-        <p class="mt-10 text-xs text-slate-400">&copy; 2026 DRC Care Medical — Tous droits réservés.</p>
+        <div class="mt-10 flex flex-col gap-2 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+            <p>&copy; {{ date('Y') }} DRC Care Medical — Tous droits réservés.</p>
+            <p>Conçu avec exigence pour les professionnels de santé.</p>
+        </div>
     </div>
 </footer>

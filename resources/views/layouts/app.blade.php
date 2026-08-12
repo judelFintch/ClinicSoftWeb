@@ -25,7 +25,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="bg-white font-sans text-slate-700 antialiased">
+<body class="bg-white font-sans text-slate-700 antialiased selection:bg-accent-200">
     <a href="#contenu" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-md focus:bg-primary-800 focus:px-4 focus:py-2 focus:text-white">
         Aller au contenu
     </a>

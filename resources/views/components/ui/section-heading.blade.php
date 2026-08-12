@@ -15,9 +15,9 @@
 
 <div {{ $attributes->merge(['class' => "reveal max-w-2xl {$alignClasses}"]) }}>
     @if ($label)
-        <p class="text-sm font-semibold tracking-wide {{ $labelColor }} uppercase">{{ $label }}</p>
+        <p class="text-xs font-bold tracking-[.18em] {{ $labelColor }} uppercase">{{ $label }}</p>
     @endif
-    <h2 class="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight {{ $titleColor }}">{{ $title }}</h2>
+    <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-[-.04em] sm:text-5xl {{ $titleColor }}">{{ $title }}</h2>
     @if ($subtitle)
         <p class="mt-4 text-lg leading-relaxed {{ $subtitleColor }}">{{ $subtitle }}</p>
     @endif

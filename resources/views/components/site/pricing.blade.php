@@ -39,7 +39,7 @@
     ];
 @endphp
 
-<section id="tarifs" class="scroll-mt-24 bg-slate-50 py-20 lg:py-28">
+<section id="tarifs" class="scroll-mt-24 bg-[#f7f9fc] py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <x-ui.section-heading
             title="Nos formules d’abonnement"
@@ -50,27 +50,27 @@
         <div class="mt-14 grid gap-8 lg:grid-cols-3 lg:items-start">
             @foreach ($plans as $plan)
                 <div @class([
-                    'reveal flex h-full flex-col rounded-2xl border p-8',
-                    'border-primary-700 bg-white shadow-[0_8px_30px_-12px_rgba(16,38,54,0.25)] lg:-translate-y-3' => $plan['featured'],
+                    'reveal flex h-full flex-col rounded-3xl border p-8',
+                    'border-primary-700 bg-primary-950 text-white shadow-[0_28px_65px_-28px_rgba(16,38,84,.55)] lg:-translate-y-3' => $plan['featured'],
                     'border-slate-200 bg-white' => ! $plan['featured'],
                 ])>
                     @if ($plan['featured'])
                         <span class="mb-4 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-primary-700 to-accent-600 px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase">Le plus choisi</span>
                     @endif
 
-                    <h3 class="text-lg font-semibold text-slate-900">{{ $plan['name'] }}</h3>
-                    <p class="mt-1 text-sm text-slate-500">{{ $plan['tagline'] }}</p>
+                    <h3 @class(['text-xl font-semibold', 'text-white' => $plan['featured'], 'text-slate-900' => !$plan['featured']])>{{ $plan['name'] }}</h3>
+                    <p @class(['mt-1 text-sm', 'text-primary-200' => $plan['featured'], 'text-slate-500' => !$plan['featured']])>{{ $plan['tagline'] }}</p>
 
                     <p class="mt-6 flex items-baseline gap-1">
-                        <span class="text-4xl font-semibold tracking-tight text-slate-900">{{ $plan['price'] }}&nbsp;$</span>
-                        <span class="text-sm text-slate-500">USD / mois</span>
+                        <span @class(['text-4xl font-semibold tracking-tight', 'text-white' => $plan['featured'], 'text-slate-900' => !$plan['featured']])>{{ $plan['price'] }}&nbsp;$</span>
+                        <span @class(['text-sm', 'text-primary-200' => $plan['featured'], 'text-slate-500' => !$plan['featured']])>USD / mois</span>
                     </p>
 
-                    <dl class="mt-8 space-y-5 border-t border-slate-200 pt-6">
+                    <dl @class(['mt-8 space-y-5 border-t pt-6', 'border-white/15' => $plan['featured'], 'border-slate-200' => !$plan['featured']])>
                         @foreach ($plan['rows'] as $label => $value)
                             <div>
-                                <dt class="text-xs font-semibold tracking-wide text-primary-700 uppercase">{{ $label }}</dt>
-                                <dd class="mt-1.5 text-sm leading-relaxed text-slate-600">{{ $value }}</dd>
+                                <dt @class(['text-xs font-semibold tracking-wide uppercase', 'text-accent-300' => $plan['featured'], 'text-primary-700' => !$plan['featured']])>{{ $label }}</dt>
+                                <dd @class(['mt-1.5 text-sm leading-relaxed', 'text-primary-100' => $plan['featured'], 'text-slate-600' => !$plan['featured']])>{{ $value }}</dd>
                             </div>
                         @endforeach
                     </dl>
@@ -78,7 +78,7 @@
                     <div class="mt-8">
                         <x-ui.demo-cta
                             label="Demander une démo"
-                            :variant="$plan['featured'] ? 'primary' : 'secondary'"
+                            :variant="$plan['featured'] ? 'inverse' : 'secondary'"
                             class="w-full justify-center"
                         />
                     </div>

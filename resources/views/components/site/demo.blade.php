@@ -1,6 +1,6 @@
-<section id="demo" class="scroll-mt-24 bg-white py-20 lg:py-28">
+<section id="demo" class="scroll-mt-24 bg-white py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
+        <div class="grid items-start gap-14 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
             <div class="reveal">
                 <x-ui.section-heading
                     label="Démonstration"

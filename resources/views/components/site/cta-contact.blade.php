@@ -1,6 +1,7 @@
-<section id="contact" class="scroll-mt-24 relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-800 to-accent-700 py-20 lg:py-28">
+<section id="contact" class="scroll-mt-24 relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-accent-700 py-24 lg:py-32">
     <div class="relative mx-auto max-w-5xl px-6 text-center lg:px-8">
-        <h2 class="reveal text-3xl font-semibold tracking-tight text-white sm:text-4xl">Prêt à moderniser la gestion de votre établissement&nbsp;?</h2>
+        <p class="reveal text-xs font-bold tracking-[.2em] text-accent-300 uppercase">Passez à l’étape suivante</p>
+        <h2 class="reveal mt-4 text-4xl font-semibold tracking-[-.04em] text-white sm:text-5xl">Prêt à moderniser la gestion de votre établissement&nbsp;?</h2>
         <p class="reveal mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-primary-100">
             Notre équipe vous accompagne du cadrage au déploiement de ClinicSoft&nbsp;: paramétrage, reprise des données, formation de vos équipes et assistance continue.
         </p>
