@@ -5,10 +5,14 @@
                 <x-ui.section-heading
                     label="Démonstration"
                     title="Voir ClinicSoft en action"
-                    subtitle="Aucune démonstration en libre accès n’est publiée pour l’instant. L’équipe DRC Care Medical organise avec vous une démonstration personnalisée de ClinicSoft, adaptée aux services de votre établissement."
+                    subtitle="Explorez librement notre instance de démonstration, ou laissez-nous vos coordonnées pour une présentation guidée par l’équipe ClinicSoft, adaptée aux services de votre établissement."
                 />
 
-                <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                <div class="mt-8">
+                    <x-ui.demo-cta label="Accéder à la démo en ligne" anchor="demo" variant="primary" />
+                </div>
+
+                <ul class="mt-10 space-y-3 text-sm text-slate-600">
                     <li class="flex items-start gap-3">
                         <span class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-700">
                             <x-ui.icon name="check" class="size-3.5" />

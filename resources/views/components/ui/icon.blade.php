@@ -134,5 +134,13 @@
             <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
             <path d="M12 8v8M8 12h8" />
             @break
+
+        @case('chevron-left')
+            <path d="M15 6l-6 6 6 6" />
+            @break
+
+        @case('chevron-right')
+            <path d="M9 6l6 6-6 6" />
+            @break
     @endswitch
 </svg>

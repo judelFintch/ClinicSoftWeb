@@ -57,4 +57,29 @@
             transition: none;
         }
     }
+
+    @keyframes float-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-16px); }
+    }
+
+    @keyframes float-medium {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-11px); }
+    }
+
+    @keyframes float-fast {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+
+    .float-slow { animation: float-slow 6.5s ease-in-out infinite; }
+    .float-medium { animation: float-medium 5.5s ease-in-out infinite; }
+    .float-fast { animation: float-fast 4.5s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .float-slow, .float-medium, .float-fast {
+            animation: none;
+        }
+    }
 }

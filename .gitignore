@@ -15,7 +15,8 @@
 /auth.json
 /database/database.sqlite
 /node_modules
-/public/build
+# Les assets Vite de production sont versionnés afin que les déploiements
+# sur l'hébergement mutualisé disposent toujours de build/manifest.json.
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage

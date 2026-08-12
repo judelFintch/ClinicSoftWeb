@@ -25,3 +25,48 @@ function initScrollReveal() {
 
 document.addEventListener('DOMContentLoaded', initScrollReveal);
 document.addEventListener('livewire:navigated', initScrollReveal);
+
+document.addEventListener('alpine:init', () => {
+    Alpine.data('heroSlider', (count) => ({
+        active: 0,
+        count,
+        timer: null,
+
+        init() {
+            if (!prefersReducedMotion) {
+                this.play();
+            }
+        },
+
+        play() {
+            this.stop();
+            this.timer = setInterval(() => this.next(), 6500);
+        },
+
+        stop() {
+            if (this.timer) {
+                clearInterval(this.timer);
+                this.timer = null;
+            }
+        },
+
+        restart() {
+            if (!prefersReducedMotion) {
+                this.play();
+            }
+        },
+
+        next() {
+            this.active = (this.active + 1) % this.count;
+        },
+
+        prev() {
+            this.active = (this.active - 1 + this.count) % this.count;
+        },
+
+        goTo(index) {
+            this.active = index;
+            this.restart();
+        },
+    }));
+});
