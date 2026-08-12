@@ -11,7 +11,7 @@
                 <a href="#fonctionnement" class="text-sm text-slate-600 hover:text-primary-800">Fonctionnement</a>
                 <a href="#modules" class="text-sm text-slate-600 hover:text-primary-800">Modules</a>
                 <a href="#tarifs" class="text-sm text-slate-600 hover:text-primary-800">Tarifs</a>
-                <a href="#demo" class="text-sm text-slate-600 hover:text-primary-800">Démo</a>
+                <a href="{{ config('clinicsoft.demo_url', 'https://demo.clinicsoft.tech/') }}" target="_blank" rel="noopener" class="text-sm text-slate-600 hover:text-primary-800">Démo</a>
                 <a href="#contact" class="text-sm text-slate-600 hover:text-primary-800">Contact</a>
             </nav>
         </div>

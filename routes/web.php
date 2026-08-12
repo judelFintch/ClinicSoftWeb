@@ -7,9 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/demo', function () {
-    if ($url = config('clinicsoft.demo_url')) {
-        return redirect()->away($url);
-    }
-
-    return view('demo-placeholder');
+    return redirect()->away(config('clinicsoft.demo_url', 'https://demo.clinicsoft.tech/'));
 })->name('demo');

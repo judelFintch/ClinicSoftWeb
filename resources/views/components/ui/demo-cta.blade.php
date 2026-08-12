@@ -1,13 +1,12 @@
 @props([
-    'label' => 'Demander une démo',
+    'label' => 'Accéder à la démo',
     'variant' => 'primary', // primary | secondary | inverse
     'anchor' => 'demo',
     'size' => 'base', // base | sm
 ])
 
 @php
-    $external = filled(config('clinicsoft.demo_url'));
-    $href = $external ? config('clinicsoft.demo_url') : '#' . $anchor;
+    $href = config('clinicsoft.demo_url', 'https://demo.clinicsoft.tech/');
 
     $variants = [
         'primary' => 'bg-primary-950 text-white shadow-[0_12px_28px_-10px_rgba(20,29,74,.65)] hover:-translate-y-0.5 hover:bg-primary-800 hover:shadow-[0_16px_35px_-10px_rgba(20,29,74,.55)] focus-visible:outline-primary-700',
@@ -23,7 +22,7 @@
 
 <a
     href="{{ $href }}"
-    @if ($external) target="_blank" rel="noopener" @endif
+    target="_blank" rel="noopener"
     {{ $attributes->merge([
         'class' => "inline-flex items-center gap-2 rounded-full font-bold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 {$variants[$variant]} {$sizes[$size]}",
     ]) }}

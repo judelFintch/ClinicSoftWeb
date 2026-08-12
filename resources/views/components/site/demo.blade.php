@@ -1,42 +1,37 @@
 <section id="demo" class="scroll-mt-24 bg-white py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid items-start gap-14 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
-            <div class="reveal">
+        <div class="reveal mx-auto max-w-4xl rounded-[2rem] border border-primary-100 bg-gradient-to-br from-primary-50 to-white p-8 text-center shadow-[0_24px_70px_-40px_rgba(20,29,74,.4)] sm:p-12 lg:p-16">
                 <x-ui.section-heading
                     label="Démonstration"
                     title="Voir ClinicSoft en action"
-                    subtitle="Explorez librement notre instance de démonstration, ou laissez-nous vos coordonnées pour une présentation guidée par l’équipe ClinicSoft, adaptée aux services de votre établissement."
+                    subtitle="Créez votre clinique de démonstration et explorez librement les fonctionnalités déjà disponibles dans un environnement isolé."
+                    align="center"
                 />
 
-                <div class="mt-8">
+                <div class="mt-8 flex justify-center">
                     <x-ui.demo-cta label="Accéder à la démo en ligne" anchor="demo" variant="primary" />
                 </div>
 
-                <ul class="mt-10 space-y-3 text-sm text-slate-600">
+                <ul class="mx-auto mt-10 grid max-w-3xl gap-3 text-left text-sm text-slate-600 sm:grid-cols-3">
                     <li class="flex items-start gap-3">
                         <span class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-700">
                             <x-ui.icon name="check" class="size-3.5" />
                         </span>
-                        Un parcours guidé sur les modules qui vous concernent le plus.
+                        Création autonome de votre espace de démonstration.
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-700">
                             <x-ui.icon name="check" class="size-3.5" />
                         </span>
-                        Des réponses concrètes sur le déploiement dans votre établissement.
+                        Données isolées pour tester en toute sécurité.
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-700">
                             <x-ui.icon name="check" class="size-3.5" />
                         </span>
-                        Sans engagement de votre part.
+                        Plusieurs rôles métier à découvrir librement.
                     </li>
                 </ul>
-            </div>
-
-            <div class="reveal">
-                @livewire('demo-request-form')
-            </div>
         </div>
     </div>
 </section>

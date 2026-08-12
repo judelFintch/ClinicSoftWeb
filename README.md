@@ -5,7 +5,7 @@ Site vitrine one-page de **ClinicSoft**, système d'information hospitalier édi
 ## Stack
 
 - **Laravel 13** — backend et routage
-- **Livewire 3** — composant interactif (formulaire de demande de démo)
+- **Livewire 3** — composants interactifs Laravel
 - **Tailwind CSS v4** (via le plugin Vite officiel) — mise en forme
 - **SQLite** — stockage local des demandes de démo
 
@@ -59,27 +59,15 @@ npm run build
 
 `composer run dev` (ou `php artisan dev`) démarre en une seule commande le serveur PHP, le worker de file d'attente et Vite en parallèle.
 
-## Formulaire « Demander une démo »
-
-Le composant Livewire `App\Livewire\DemoRequestForm` (vue : `resources/views/livewire/demo-request-form.blade.php`) :
-
-- valide les champs (nom, établissement, téléphone, email, message optionnel) ;
-- enregistre chaque demande dans la table `demo_requests` (toujours, quelle que soit la configuration email) ;
-- tente d'envoyer un email de notification à l'adresse définie par `CLINICSOFT_DEMO_EMAIL` dans `.env` (par défaut `info@clinicsoft.tech`) via `Mail::`. Si aucun serveur SMTP n'est configuré, `MAIL_MAILER=log` (valeur par défaut du projet) écrit simplement le contenu de l'email dans `storage/logs/laravel.log`, sans faire échouer la soumission.
-
-Pour activer un envoi d'email réel, renseigner dans `.env` les variables `MAIL_MAILER`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD` d'un fournisseur SMTP (Mailgun, SendGrid, Gmail SMTP, etc.).
-
 ## Lien de démo
 
-Tant qu'aucune instance de démonstration réelle n'est en ligne, les boutons « Voir la démo » / « Demander une démo » renvoient vers la section `#demo` de la page, qui contient le formulaire ci-dessus. La route technique `/demo` affiche une page « Démo bientôt disponible ».
-
-Dès qu'une démo réelle (vidéo ou instance ClinicSoft) sera disponible, il suffira de renseigner son URL dans `.env` :
+Tous les appels à la démo et la route `/demo` redirigent directement vers l'instance publique. L'URL peut être personnalisée dans `.env` :
 
 ```
 CLINICSOFT_DEMO_URL=https://demo.clinicsoft.tech/
 ```
 
-La démo est accessible à l’adresse [https://demo.clinicsoft.tech/](https://demo.clinicsoft.tech/). Tous les boutons de démo et la route `/demo` pointent automatiquement vers cette URL (nouvel onglet) — voir `config/clinicsoft.php`.
+Par défaut, la démo est accessible à l’adresse [https://demo.clinicsoft.tech/](https://demo.clinicsoft.tech/). La section Modules distingue les fonctionnalités disponibles dans la démo de celles encore en développement.
 
 ## Structure des vues
 
@@ -87,12 +75,9 @@ La démo est accessible à l’adresse [https://demo.clinicsoft.tech/](https://d
 resources/views/
 ├── layouts/app.blade.php        # squelette HTML, SEO, favicon
 ├── welcome.blade.php            # page d'accueil one-page (assemble les sections)
-├── demo-placeholder.blade.php   # page technique /demo
 ├── components/
 │   ├── site/                    # une section de page par fichier (hero, modules, tarifs, ...)
 │   └── ui/                      # composants réutilisables (bouton CTA, icônes, badge, titre de section)
-└── livewire/
-    └── demo-request-form.blade.php
 ```
 
 ## Assets de marque

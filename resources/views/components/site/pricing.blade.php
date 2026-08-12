@@ -77,7 +77,7 @@
 
                     <div class="mt-8">
                         <x-ui.demo-cta
-                            label="Demander une démo"
+                            label="Voir la démo"
                             :variant="$plan['featured'] ? 'inverse' : 'secondary'"
                             class="w-full justify-center"
                         />

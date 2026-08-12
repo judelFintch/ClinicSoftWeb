@@ -1,15 +1,15 @@
 @php
     $modules = [
-        ['icon' => 'reception', 'name' => 'Accueil', 'desc' => 'Enregistrement & rendez-vous'],
-        ['icon' => 'doctor', 'name' => 'Médecin', 'desc' => 'Consultation & prescriptions'],
-        ['icon' => 'nurse', 'name' => 'Soins infirmiers', 'desc' => 'Constantes & plans de soins'],
-        ['icon' => 'lab', 'name' => 'Laboratoire', 'desc' => 'Analyses & résultats'],
-        ['icon' => 'imaging', 'name' => 'Imagerie', 'desc' => 'Examens & comptes rendus'],
-        ['icon' => 'pharmacy', 'name' => 'Pharmacie', 'desc' => 'Stocks, ventes & dettes'],
-        ['icon' => 'maternity', 'name' => 'Maternité', 'desc' => 'Accouchement & nouveau-né'],
-        ['icon' => 'cashier', 'name' => 'Caisse', 'desc' => 'Encaissements & cautions'],
-        ['icon' => 'accounting', 'name' => 'Comptabilité', 'desc' => 'Journaux & états financiers'],
-        ['icon' => 'direction', 'name' => 'Direction', 'desc' => 'Rapports & pilotage'],
+        ['icon' => 'reception', 'name' => 'Accueil', 'desc' => 'Dossier patient, enregistrement & rendez-vous', 'available' => true],
+        ['icon' => 'doctor', 'name' => 'Médecin', 'desc' => 'Consultations & prescriptions', 'available' => true],
+        ['icon' => 'nurse', 'name' => 'Soins infirmiers', 'desc' => 'Constantes, soins & hospitalisation', 'available' => true],
+        ['icon' => 'lab', 'name' => 'Laboratoire', 'desc' => 'Demandes, analyses & résultats', 'available' => true],
+        ['icon' => 'imaging', 'name' => 'Imagerie', 'desc' => 'Examens, résultats & validations', 'available' => true],
+        ['icon' => 'pharmacy', 'name' => 'Pharmacie', 'desc' => 'Produits, stocks & mouvements', 'available' => true],
+        ['icon' => 'cashier', 'name' => 'Caisse', 'desc' => 'Facturation, paiements & cautions', 'available' => true],
+        ['icon' => 'direction', 'name' => 'Direction', 'desc' => 'Tableau de bord & rapports', 'available' => true],
+        ['icon' => 'maternity', 'name' => 'Maternité', 'desc' => 'Accouchement & nouveau-né', 'available' => false],
+        ['icon' => 'accounting', 'name' => 'Comptabilité', 'desc' => 'Journaux & états financiers', 'available' => false],
     ];
 @endphp
 
@@ -18,13 +18,23 @@
         <x-ui.section-heading
             label="Un système, tous les services"
             title="Un module pour chaque métier de votre établissement"
+            subtitle="Une vue transparente de ce qui est déjà utilisable dans la démo et de ce qui arrive prochainement."
             align="center"
             light
         />
 
         <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             @foreach ($modules as $module)
-                <div class="reveal group rounded-3xl border border-white/10 bg-white/[.055] p-6 backdrop-blur transition hover:border-accent-400/40 hover:bg-white/[.09]">
+                <div @class([
+                    'reveal group relative rounded-3xl border p-6 backdrop-blur transition',
+                    'border-white/10 bg-white/[.055] hover:border-accent-400/40 hover:bg-white/[.09]' => $module['available'],
+                    'border-white/5 bg-white/[.025] opacity-75' => ! $module['available'],
+                ])>
+                    <span @class([
+                        'absolute right-4 top-4 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide',
+                        'bg-emerald-400/15 text-emerald-300' => $module['available'],
+                        'bg-white/10 text-primary-200' => ! $module['available'],
+                    ])>{{ $module['available'] ? 'Disponible' : 'À venir' }}</span>
                     <span class="flex size-11 items-center justify-center rounded-xl bg-white/10 text-accent-300 transition group-hover:scale-110 group-hover:bg-accent-400 group-hover:text-primary-950">
                         <x-ui.icon :name="$module['icon']" />
                     </span>
@@ -32,6 +42,11 @@
                     <p class="mt-1.5 text-sm leading-relaxed text-primary-200">{{ $module['desc'] }}</p>
                 </div>
             @endforeach
+        </div>
+
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-5 text-sm text-primary-100">
+            <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-emerald-400"></span>Disponible dans la démo</span>
+            <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-white/40"></span>En cours de développement</span>
         </div>
 
         <div class="reveal mt-10 rounded-3xl border border-accent-300/20 bg-gradient-to-r from-primary-800/80 to-accent-700/40 p-8 text-center sm:p-10">

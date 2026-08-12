@@ -7,7 +7,7 @@
         </p>
 
         <div class="reveal mt-9 flex justify-center">
-            <x-ui.demo-cta label="Demander une démo" variant="inverse" />
+            <x-ui.demo-cta label="Accéder à la démo" variant="inverse" />
         </div>
 
         <div class="reveal mt-16 grid gap-4 border-t border-white/15 pt-10 text-left sm:grid-cols-3">
